@@ -9,7 +9,9 @@
 //   promise: getBTCData,
 // };
 
-// export const getFeesInfo = {
-//   type: GET_FEESINFO,
-//   promise: getFeesData,
+// export const getFeesInfo = (data) => {
+//     return (
+//         type: GET_FEESINFO,
+//         payload: data ,
+//     )
 // };

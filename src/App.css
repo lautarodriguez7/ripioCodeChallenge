@@ -6,13 +6,7 @@
 }
 
 .list {
-    width: 30%;
+    width: 40%;
     height: 100%;
-    background-color: red;
-}
-
-.form {
-    width: 30%;
-    height: 100%;
-    background-color: green;
+    background-color: #6D07E6;
 }

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./app.css";
 import { getBTCData } from "./services/getBTCData";
 import Form from "./components";
 
 function App(props) {
-  const [btcData, setBtcData] = React.useState(null);
-  const [sendData, setSendData] = React.useState(null);
+  const [btcData, setBtcData] = useState(null);
+  const [sendData, setSendData] = useState(null);
   useEffect(() => {
     setBtcData(getBTCData());
   }, []);
@@ -35,7 +35,7 @@ function App(props) {
           handleInputChange={handleInputChange}
         />
       </div>
-      <div className="list">hello</div>
+      <div className="list"></div>
     </div>
   );
 }

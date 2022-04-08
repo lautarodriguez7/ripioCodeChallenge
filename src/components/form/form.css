@@ -1,9 +1,49 @@
 .form {
-    width: 30%;
+    background-color:#793cfc ;
+    width: 40%;
     height: 100%;
-    background-color: green;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
+}
+
+.form label {
+    font-size: 1.1em;
+}
+
+.form input {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: #e8dbf9;
+}
+.form button {
+    transition: 1s;
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    background-color: #d7cce6;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #6D07E6;
+    color: #d7cce6;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.logoRipio {
+    margin-bottom:1rem;
 }

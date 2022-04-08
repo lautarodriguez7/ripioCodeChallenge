@@ -1,5 +1,6 @@
 import React from "react";
 import "./form.css";
+import LogoRipio from "./logo_ripio.svg";
 
 export const Form = ({ fees, handleInputChange }) => {
   const sendBTC = (event) => {
@@ -8,6 +9,7 @@ export const Form = ({ fees, handleInputChange }) => {
 
   return (
     <form className="form" onSubmit={sendBTC}>
+      <img className="logoRipio" src={LogoRipio} alt="" />
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Direccion BTC</label>
         <input
@@ -23,7 +25,7 @@ export const Form = ({ fees, handleInputChange }) => {
           onChange={handleInputChange}
           placeholder="Ingrese monto"
         />
-        <label htmlFor="exampleInputPassword1">comision de la red</label>
+        <label htmlFor="exampleInputPassword1">Comisión de la red</label>
         <input
           type="text"
           name="fees"
