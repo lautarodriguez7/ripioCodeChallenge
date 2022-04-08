@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./app.css";
+import { getBTCData } from "./services/getBTCData";
+import Form from "./components";
 
-function App() {
+function App(props) {
+  const [btcData, setBtcData] = React.useState(null);
+  const [sendData, setSendData] = React.useState(null);
+  useEffect(() => {
+    setBtcData(getBTCData());
+  }, []);
+
+  const handleInputChange = (event) => {
+    setSendData({
+      ...sendData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  console.log(sendData);
+  const maxFees = 0.0002;
+  const minFees = 0.0001;
+
+  const getRandomFees = () => {
+    let fees = Math.random() * (maxFees - minFees) + minFees;
+    return fees.toFixed(7);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="form">
+        <Form
+          fees={getRandomFees}
+          sendData={sendData}
+          handleInputChange={handleInputChange}
+        />
+      </div>
+      <div className="list">hello</div>
     </div>
   );
 }
