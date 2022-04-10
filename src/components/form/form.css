@@ -1,7 +1,6 @@
 .form {
     background-color:#793cfc ;
     width: 40%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,10 +19,16 @@
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
-    padding: 0 10px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #e8dbf9;
 }
+
+.form input:focus {
+    outline: none;
+    background-color: #fff
+}
+
+
 .form button {
     transition: 1s;
     margin-top: 0.5rem;
@@ -39,7 +44,6 @@
 
 .form button:hover {
     background-color: #6D07E6;
-    color: #d7cce6;
     transition: 0.5s;
     font-size: 20px;
 }

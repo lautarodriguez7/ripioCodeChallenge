@@ -1,0 +1,14 @@
+.card-success{
+    width: 400px;
+    background-color: rgb(124, 188, 129);
+    text-align: center;
+    border-radius: 20px
+}
+
+.card-fail{
+    width: 400px;
+    background-color: rgb(183, 85, 85);
+    text-align: center;
+    border-radius: 20px
+
+}

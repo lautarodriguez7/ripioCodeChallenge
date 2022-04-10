@@ -1,3 +1,4 @@
 import { Form } from "./form/Form";
+import { History } from "./history/History";
 
-export default Form;
+export { Form, History };

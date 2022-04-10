@@ -7,6 +7,24 @@
 
 .list {
     width: 40%;
-    height: 100%;
     background-color: #6D07E6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.list > h2 {
+    position: fixed;
+    top: 0;
+}
+.wallet {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.walletArg {
+    margin-bottom: 20px;
 }

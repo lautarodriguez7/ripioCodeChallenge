@@ -1,23 +1,18 @@
-import { GET_BTCPRICE, GET_FEESINFO } from "../actions/BTCActions";
+import { HISTORY_DATA } from "../actions/BTCActions";
 
 const initialState = {
-  BTCInfo: {},
-  feesInfo: {},
-  message: "",
+  historyData: [],
 };
 
-export function btcReducer(state = initialState, action) {
+export function historyReducer(state = initialState, action) {
+  console.log(action.type);
   switch (action.type) {
-    case GET_BTCPRICE:
+    case HISTORY_DATA:
       return {
         ...state,
-        BTCInfo: action.payload,
+        historyData: [...state.historyData, action.payload],
       };
-    case GET_FEESINFO:
-      return {
-        ...state,
-        feesInfo: action.resp.data,
-      };
+
     default:
       return state;
   }
