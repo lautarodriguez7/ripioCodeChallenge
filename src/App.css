@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .list {
@@ -20,11 +20,14 @@
     top: 0;
 }
 .wallet {
-    margin-top: 10px;
-    margin-bottom: 40px;
     font-size: 30px;
 }
 
 .walletArg {
-    margin-bottom: 20px;
+    margin: 1em 0em 8em;
+}
+
+.wallet, .walletArg {
+    color: #000;
+    font-weight: bold;
 }

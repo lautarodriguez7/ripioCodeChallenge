@@ -8,7 +8,7 @@ import { getHistoryData } from "./redux/actions/BTCActions";
 function App(props) {
   const [btcData, setBtcData] = useState(null);
 
-  const [wallet, setWallet] = useState(3);
+  const [wallet, setWallet] = useState(10);
 
   useEffect(() => {
     getBTCData().then((data) => {
@@ -25,8 +25,12 @@ function App(props) {
   };
 
   const getArgValue = () => {
+    const formatter = new Intl.NumberFormat("es-AR", {
+      style: "currency",
+      currency: "ARS",
+    });
     let arg = btcData && wallet * btcData.rates.ARS_BUY;
-    return arg;
+    return arg ? formatter.format(arg) : "";
   };
 
   return (
@@ -42,7 +46,6 @@ function App(props) {
         />
       </div>
       <div className="list">
-        <h2>Historial de envios</h2>
         <History historyData={props.historyProps.historyData} />
       </div>
     </div>
