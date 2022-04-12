@@ -51,13 +51,13 @@ function App(props) {
     </div>
   );
 }
-// estado de redux
+
 const mapStateToProps = (state) => {
   return {
     historyProps: state,
   };
 };
-// acciones de redux
+
 const mapDispatchToProps = (dispatch) => {
   return {
     historyData: (data) => {
@@ -65,7 +65,7 @@ const mapDispatchToProps = (dispatch) => {
     },
   };
 };
-// conecta las acciones y los estados de redux a react y los pasa como props
+
 const AppExport = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export default AppExport;

@@ -6,7 +6,7 @@ export const Form = ({ fees, historyData, wallet, setWallet }) => {
   const formatDate = () => {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, "0");
-    var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var mm = String(today.getMonth() + 1).padStart(2, "0");
     var yyyy = today.getFullYear();
 
     return (today = dd + "/" + mm + "/" + yyyy);
@@ -45,7 +45,7 @@ export const Form = ({ fees, historyData, wallet, setWallet }) => {
         setWallet(wallet - (amount + feesMount));
         data = {
           ...data,
-          state: "Enviado Exitoso",
+          state: "Envio Exitoso",
         };
         historyData(data);
         alert("Envio exitoso");
@@ -54,41 +54,6 @@ export const Form = ({ fees, historyData, wallet, setWallet }) => {
       setInputAmount("");
     }
   };
-
-  // const sendBTC = (event) => {
-  //   let data;
-  //   event.preventDefault();
-  //   Object.values(event.target).map((item) => {
-  //     if (item.name) {
-  //       data = {
-  //         ...data,
-  //         [item.name]: item.value,
-  //         date: formatDate(),
-  //         id: Math.floor(Math.random() * 100000000000),
-  //       };
-  //     }
-  //   });
-  //   let amount = parseFloat(data.amount);
-  //   let feesMount = parseFloat(data.fees);
-  //   if (amount + feesMount > wallet) {
-  //     data = {
-  //       ...data,
-  //       state: "No Exitoso",
-  //     };
-  //     historyData(data);
-  //     alert("No hay suficiente BTC");
-  //   } else {
-  //     setWallet(wallet - (amount + feesMount));
-  //     data = {
-  //       ...data,
-  //       state: "Enviado Exitoso",
-  //     };
-  //     historyData(data);
-  //     alert("Envio exitoso");
-  //   }
-  //   setInputAddress("");
-  //   setInputAmount("");
-  // };
 
   return (
     <form className="form" onSubmit={sendBTC}>
